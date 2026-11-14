@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>No Bananas on Boats — The Ancient Maritime Curse</title>
+<meta name="description" content="Sailors have refused to allow bananas aboard for centuries. Spoiled catches, vanished ships, snakes in the cargo, and engines that die — here's why bananas and boats don't mix." />
+<meta property="og:title" content="No Bananas on Boats" />
+<meta property="og:description" content="The oldest superstition at sea, explained. Spoilage, snakes, speed, and sunk ships." />
+<meta property="og:type" content="website" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Pirata+One&family=Spectral:ital,wght@0,400;0,600;1,400&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%8D%8C%3C/text%3E%3C/svg%3E" />
+<style>
+:root{
+  --sea:#0b3d4f; --deep:#06242f; --foam:#e8f4f2; --gold:#f4c430;
+  --banana:#ffe14d; --coral:#ff6b4a; --rope:#c9a66b; --ink:#04171e;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  background:var(--deep);color:var(--foam);
+  font-family:'Spectral',Georgia,serif;line-height:1.7;
+  overflow-x:hidden;
+}
+a{color:var(--banana)}
+.wrap{max-width:860px;margin:0 auto;padding:0 24px}
+
+/* ---- HERO ---- */
+header.hero{
+  position:relative;min-height:100vh;display:flex;flex-direction:column;
+  align-items:center;justify-content:center;text-align:center;
+  background:
+    radial-gradient(ellipse at 50% 120%, rgba(244,196,48,.18), transparent 60%),
+    linear-gradient(180deg,#02161d 0%,#0b3d4f 60%,#0e4a5e 100%);
+  overflow:hidden;
+}
+.waves{position:absolute;bottom:0;left:0;width:100%;height:160px;opacity:.5}
+.hero h1{
+  font-family:'Pirata One',cursive;font-weight:400;
+  font-size:clamp(3rem,11vw,7rem);line-height:.95;
+  color:var(--banana);text-shadow:0 4px 0 #0003,0 0 40px rgba(255,225,77,.25);
+  letter-spacing:1px;margin-bottom:.2em;
+}
+.hero .sub{
+  font-style:italic;font-size:clamp(1.05rem,2.6vw,1.5rem);
+  color:var(--foam);opacity:.9;max-width:540px;margin:0 auto 2rem;
+}
+.banana-float{font-size:clamp(3rem,9vw,5rem);display:inline-block;animation:bob 3.5s ease-in-out infinite;filter:drop-shadow(0 10px 18px #0006)}
+@keyframes bob{0%,100%{transform:translateY(0) rotate(-6deg)}50%{transform:translateY(-18px) rotate(6deg)}}
+.scroll-cue{position:absolute;bottom:28px;font-family:'DM Mono',monospace;font-size:.75rem;letter-spacing:.3em;text-transform:uppercase;opacity:.6;animation:fade 2s ease-in-out infinite}
+@keyframes fade{0%,100%{opacity:.25}50%{opacity:.8}}
+
+/* ---- SECTIONS ---- */
+section{padding:72px 0;position:relative}
+.eyebrow{font-family:'DM Mono',monospace;font-size:.75rem;letter-spacing:.35em;text-transform:uppercase;color:var(--gold);opacity:.85;margin-bottom:.8rem}
+h2{font-family:'Pirata One',cursive;font-weight:400;font-size:clamp(2rem,6vw,3.2rem);color:var(--banana);line-height:1;margin-bottom:.6em}
+h3{font-size:1.3rem;color:var(--foam);margin:1.4em 0 .3em}
+p{margin-bottom:1.1rem;font-size:1.08rem}
+.lead{font-size:1.25rem;opacity:.95}
+
+.band{background:linear-gradient(180deg,#0e4a5e,#0b3d4f)}
+.band-dark{background:var(--ink)}
+
+/* reasons grid */
+.reasons{display:grid;gap:22px;margin-top:2rem}
+@media(min-width:620px){.reasons{grid-template-columns:1fr 1fr}}
+.card{
+  background:rgba(255,255,255,.04);border:1px solid rgba(255,225,77,.18);
+  border-radius:14px;padding:26px 24px;transition:transform .25s,border-color .25s,background .25s;
+}
+.card:hover{transform:translateY(-6px);border-color:var(--banana);background:rgba(255,225,77,.07)}
+.card .num{font-family:'Pirata One',cursive;font-size:2.4rem;color:var(--coral);line-height:1}
+.card h3{margin:.2em 0 .3em;font-size:1.25rem;color:var(--banana)}
+.card p{font-size:1rem;opacity:.9;margin:0}
+
+/* quote */
+.quote{border-left:4px solid var(--coral);padding:8px 0 8px 24px;font-style:italic;font-size:1.3rem;opacity:.95;margin:2rem 0}
+
+/* verdict */
+.verdict{text-align:center;background:
+  radial-gradient(ellipse at 50% 0%, rgba(255,107,74,.2), transparent 60%),var(--ink)}
+.stamp{
+  display:inline-block;border:5px solid var(--coral);color:var(--coral);
+  font-family:'Pirata One',cursive;font-size:clamp(1.6rem,6vw,2.6rem);
+  padding:12px 34px;border-radius:10px;transform:rotate(-7deg);
+  margin:1rem 0 2rem;text-shadow:0 2px 0 #0004;box-shadow:0 0 0 4px #ff6b4a22;
+}
+.rules{list-style:none;max-width:520px;margin:1rem auto;text-align:left}
+.rules li{padding:12px 0;border-bottom:1px dashed rgba(255,255,255,.15);display:flex;gap:14px;align-items:flex-start}
+.rules li::before{content:"⚓";flex:none}
+
+footer{background:#020e13;text-align:center;padding:48px 24px;font-family:'DM Mono',monospace;font-size:.8rem;opacity:.7;line-height:1.9}
+footer .big{font-family:'Pirata One',cursive;font-size:1.6rem;color:var(--banana);opacity:1;letter-spacing:1px}
+.disclaimer{max-width:560px;margin:14px auto 0;font-style:italic;font-family:'Spectral';opacity:.8}
+
+::selection{background:var(--banana);color:var(--ink)}
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="banana-float">🍌</div>
+  <h1>No Bananas<br>On Boats</h1>
+  <p class="sub">For three hundred years, sailors have refused to let a single banana aboard. They weren't being silly. They were being careful.</p>
+  <svg class="waves" viewBox="0 0 1440 160" preserveAspectRatio="none"><path fill="#0a3242" d="M0,64 C240,120 480,8 720,48 C960,88 1200,136 1440,72 L1440,160 L0,160 Z"></path><path fill="#06242f" opacity=".7" d="M0,96 C240,48 480,140 720,96 C960,52 1200,20 1440,96 L1440,160 L0,160 Z"></path></svg>
+  <div class="scroll-cue">Scroll · the curse awaits</div>
+</header>
+
+<section class="wrap">
+  <div class="eyebrow">An old law of the sea</div>
+  <h2>The oldest superstition afloat</h2>
+  <p class="lead">Ask a lifelong fisherman to bring a banana on his boat and watch his face change. In marinas from the Carolinas to the Caribbean, the rule is unspoken and absolute: <strong>no bananas.</strong> Not the fruit, not banana bread, not Banana Boat sunscreen, not a shirt with Chiquita on the label.</p>
+  <p>It sounds absurd until you learn where it came from. The ban traces back to the 1700s, the golden age of trade when fortunes crossed the Atlantic in wooden hulls — and ships carrying bananas had a disturbing habit of never arriving. Over the years the fear hardened into one of the most widely held traditions in all of seafaring. Here's the case against the humble banana.</p>
+</section>
+
+<section class="band">
+  <div class="wrap">
+    <div class="eyebrow">The evidence</div>
+    <h2>Seven reasons to leave them on the dock</h2>
+    <div class="reasons">
+      <div class="card"><div class="num">01</div><h3>They sink ships (statistically)</h3><p>In the 1700s, trading vessels lost at sea had an eerie tendency to be carrying bananas. To make the perishable fruit before it rotted, captains sailed fast and hard — straight through weather a wiser skipper would've waited out. The banana ships vanished; the legend was born.</p></div>
+      <div class="card"><div class="num">02</div><h3>They spoil everything nearby</h3><p>Ripening bananas release ethylene gas, which makes all your other produce ripen and rot faster. On a long voyage with limited food, a crate of bananas could quietly spoil the entire larder before you reached port.</p></div>
+      <div class="card"><div class="num">03</div><h3>They smuggle snakes & spiders</h3><p>Banana bunches were notorious for hiding venomous stowaways — spiders, snakes, and biting insects tucked in the stalks. A deadly bite mid-ocean, far from any doctor, and the crew blamed the fruit. Fairly.</p></div>
+      <div class="card"><div class="num">04</div><h3>They kill the fishing</h3><p>The most stubborn belief of all: bananas aboard means you won't catch a thing. Charter captains swear by it to this day. One theory — fast banana-boats trolled too quickly for fish to bite, so "bananas" became shorthand for a dead day on the water.</p></div>
+      <div class="card"><div class="num">05</div><h3>They ferment into trouble</h3><p>In the heat of a cargo hold, bananas fermented and released gases some believed were toxic — and in poorly ventilated holds, possibly were. Crews working below deck fell ill, and the fruit took the blame.</p></div>
+      <div class="card"><div class="num">06</div><h3>They rot before you profit</h3><p>Pressure to deliver bananas while still yellow meant no stopping, no delays, no second chances. The fruit dictated the voyage — and a voyage ruled by panic is a voyage that ends badly.</p></div>
+      <div class="card"><div class="num">07</div><h3>They anger the sea itself</h3><p>Centuries of bad luck calcified into pure superstition. Today the "why" barely matters. A banana on board is simply bad juju — and no one sensible tempts the ocean on a technicality.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="wrap">
+  <div class="eyebrow">From the mouths of mariners</div>
+  <h2>They're not joking</h2>
+  <blockquote class="quote">"I've turned a man around at the dock and made him throw his lunch in the truck. Banana muffin. I don't care. It's not coming on my boat."</blockquote>
+  <p>Modern sport-fishing culture takes the ban as seriously as any 18th-century deckhand. Entire tackle brands sell "no banana" flags and decals. Crews have been known to search coolers. Some captains extend the curse to anything banana-<em>adjacent</em> — Fruit of the Loom underwear, Banana Republic hats, even a certain brand of sunscreen have all been tossed ashore.</p>
+  <p>Is it rational? Mostly not. Is it worth the risk on the one day the fish finally show up? Absolutely not.</p>
+</section>
+
+<section class="verdict">
+  <div class="wrap">
+    <div class="eyebrow">The ruling</div>
+    <div class="stamp">Verdict: Leave the Bananas</div>
+    <p class="lead">You don't have to believe in curses. You just have to respect three centuries of sailors who all independently decided the same thing. Here's the deckhand's code:</p>
+    <ul class="rules">
+      <li>No bananas. No banana bread, chips, or muffins.</li>
+      <li>Check the sunscreen — Banana Boat stays in the car.</li>
+      <li>No banana-brand clothing. The sea reads labels.</li>
+      <li>If in doubt, it goes on the dock. Every time.</li>
+      <li>When the fish aren't biting, search the cooler.</li>
+    </ul>
+  </div>
+</section>
+
+<footer>
+  <div class="big">🍌 nobananas.boats ⚓</div>
+  <div>A public service announcement for anyone who owns a cooler and a dream.</div>
+  <p class="disclaimer">This site is a lighthearted love letter to a genuine maritime superstition. No bananas were harmed. The fish were already gone before we got there.</p>
+</footer>
+
+<script>
+// tiny parallax on the floating banana + reveal-on-scroll
+const io=new IntersectionObserver((es)=>{es.forEach(e=>{if(e.isIntersecting){e.target.style.opacity=1;e.target.style.transform='none';io.unobserve(e.target)}})},{threshold:.12});
+document.querySelectorAll('.card,.quote,.stamp,h2,.lead').forEach(el=>{el.style.opacity=0;el.style.transform='translateY(24px)';el.style.transition='opacity .6s ease, transform .6s ease';io.observe(el)});
+</script>
+</body>
+</html>
